@@ -1,0 +1,119 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background-color: #00a884; /* Change background color */
+}
+
+#myPlayer {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+}
+
+/* CSS for the subscription message box and WhatsApp icon */
+#tme {
+  position: fixed;
+  z-index: 99999999;
+  bottom: 70px;
+  right: 25px;
+  width: 40px; /* Make the WhatsApp icon smaller */
+  height: 40px; /* Make the WhatsApp icon smaller */
+  text-align: center;
+  border-radius: 50%;
+  background-color: #00a884; /* Change background color */
+  cursor: pointer;
+}
+
+#tme_message {
+  text-align: right;
+  position: absolute;
+  bottom: 62px;
+  right: -10px;
+  width: 200px; /* Make the message box smaller */
+  padding: 8px; /* Make the message box smaller */
+  background: white;
+  border-radius: 4px;
+  box-shadow: 0 2px 5px rgb(0 0 0);
+  transition: opacity .5s ease-in;
+  font-size: 15px; /* Make the message smaller */
+}
+
+#tme_message:after,
+#tme_message:before {
+  content: '';
+  position: absolute;
+  bottom: -16px; /* Make the arrow position smaller */
+  right: 20px; /* Make the arrow position smaller */
+  border-style: solid;
+  height: 0;
+  width: 0;
+  border-width: 8px; /* Make the arrow size smaller */
+  border-color: transparent;
+}
+
+#tme_message:after {
+  border-top-color: #fff;
+  bottom: -14px; /* Make the arrow position smaller */
+}
+
+#tme svg {
+  margin-top: 5px; /* Make the WhatsApp icon position smaller */
+  width: 21px; /* Make the WhatsApp icon size smaller */
+  height: 27px; /* Make the WhatsApp icon size smaller */
+}
+
+#tme_message p {
+  letter-spacing: -.5px;
+  margin: 5px 0 0;
+  color: #8e8e8e;
+  text-align: right;
+}
+
+.clossalert {
+  position: absolute;
+  left: -8px; /* Make the close button position smaller */
+  top: -8px; /* Make the close button position smaller */
+  border-radius: 50%;
+  cursor: pointer;
+  background: #fff;
+  font-size: 10px;
+  width: 16px; /* Make the close button size smaller */
+  height: 16px; /* Make the close button size smaller */
+  border: solid 1px #d9d9d9;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#tme.itisltr {
+  right: auto;
+  left: 30px; /* Make the WhatsApp icon position smaller */
+}
+
+#tme.itisltr #tme_message {
+  text-align: left;
+  right: auto;
+  left: -10px;
+}
+
+#tme.itisltr #tme_message:before,
+#tme.itisltr #tme_message::after {
+  right: auto;
+  left: 20px; /* Make the arrow position smaller */
+}
+
+#tme.itisltr #tme_message p {
+  text-align: left;
+}
+
+#tme.itisltr #tme_message a {
+  margin: 6px 0 0 6px;
+  display: block;
+  color: #00a884; /* Change link color */
+  text-decoration: none; /* Remove underline */
+  font-weight: bold;
+}
+/* End of CSS for the subscription message box and WhatsApp icon */
